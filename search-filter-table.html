@@ -1,145 +1,105 @@
-
-
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-
-
-#myInput {
-  background-image:
-  url('/img/search.png');
-
-  background-position: 5px 10px;
-  background-size:40px;
-  background-repeat: no-repeat;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
-
-
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
-
-
-#myTable tr.header, #myTable tr:hover{
-  background-color: #f1f1f1;
-}
-
-</style>
-</head>
-
-<body>
-
-<h2>NATIONAL ANIMALS</h2>
-
-<input type="text" id="myInput"
-onkeyup="myFunction()" placeholder=
-"Search by Country...."
-
-title="Type in a name">
-
-<table id="myTable">
-<tr class="header">
-<th style="width:60%;">Country</th>
-<th style="width:40%;">National Animals</th>
-</tr>
-
-  <tr>
-    <td>India</td>
-    <td>Bengal Tiger</td>
-  </tr>
-
-  <tr>
-    <td>Nepal</td>
-    <td>Cow</td>
-  </tr>
-
-  <tr>
-    <td>Peru</td>
-    <td>Vicuña</td>
-  </tr>
-
-  <tr>
-    <td>Philippines</td>
-    <td>Carabao</td>
-  </tr>
-
-  <tr>
-    <td> Romania</td>
-    <td>Lynx</td>
-  </tr>
-
-  <tr>
-    <td>Rwanda</td>
-    <td>Leopard</td>
-  </tr>
-
-  <tr>
-    <td>Spain</td>
-    <td>Bull</td>
-  </tr>
-
-  <tr>
-    <td>Thailand</td>
-    <td>Elephant</td>
-  </tr>
-
-  <tr>
-    <td>Turkey</td>
-    <td>Greywolf</td>
-  </tr>
-
-</table>
-
-<script>
-
-function myFunction() {
-var input, filter, table, tr, td, i;
-input=document.getElementById("myInput");
-
-filter=input.value.toUpperCase();
-
-table=document.getElementById("myTable");
-
-tr=table.getElementsByTagName("tr");
-
-for (i = 0; i < tr.length; i++) {
-td = tr[i].getElementsByTagName("td")[0];
-
- if (td) {
-   if (td.innerHTML.toUpperCase()
-   .indexOf(filter) > -1) {
-
-     tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-
-      }
-    }
-  }
-}
-
-</script>
-
-</body>
+	<head>
+		<style>
+		#myInput {
+		background-image:
+		url('/img/search.png');
+		background-position: 5px 10px;
+		background-size:40px;
+		background-repeat: no-repeat;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 1px solid #ddd;
+		margin-bottom: 12px;
+		}
+		#myTable {
+		border-collapse: collapse;
+		width: 100%;
+		border: 1px solid #ddd;
+		font-size: 18px;
+		}
+		#myTable th, #myTable td {
+		text-align: left;
+		padding: 12px;
+		}
+		#myTable tr {
+		border-bottom: 1px solid #ddd;
+		}
+		#myTable tr.header, #myTable tr:hover{
+		background-color: #f1f1f1;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>NATIONAL ANIMALS</h2>
+		<input type="text" id="myInput"
+		onkeyup="myFunction()" placeholder=
+		"Search by Country...."
+		title="Type in a name">
+		<table id="myTable">
+			<tr class="header">
+				<th style="width:60%;">Country</th>
+				<th style="width:40%;">National Animals</th>
+			</tr>
+			<tr>
+				<td>India</td>
+				<td>Bengal Tiger</td>
+			</tr>
+			<tr>
+				<td>Nepal</td>
+				<td>Cow</td>
+			</tr>
+			<tr>
+				<td>Peru</td>
+				<td>Vicuña</td>
+			</tr>
+			<tr>
+				<td>Philippines</td>
+				<td>Carabao</td>
+			</tr>
+			<tr>
+				<td> Romania</td>
+				<td>Lynx</td>
+			</tr>
+			<tr>
+				<td>Rwanda</td>
+				<td>Leopard</td>
+			</tr>
+			<tr>
+				<td>Spain</td>
+				<td>Bull</td>
+			</tr>
+			<tr>
+				<td>Thailand</td>
+				<td>Elephant</td>
+			</tr>
+			<tr>
+				<td>Turkey</td>
+				<td>Greywolf</td>
+			</tr>
+		</table>
+		<script>
+		function myFunction() {
+		var input, filter, table, tr, td, i;
+		input=document.getElementById("myInput");
+		filter=input.value.toUpperCase();
+		table=document.getElementById("myTable");
+		tr=table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		if (td.innerHTML.toUpperCase()
+		.indexOf(filter) > -1) {
+		tr[i].style.display = "";
+		} else {
+		tr[i].style.display = "none";
+		}
+		}
+		}
+		}
+		</script>
+	</body>
 </html>
